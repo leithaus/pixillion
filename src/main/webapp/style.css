@@ -1,0 +1,39 @@
+* {margin: 0; padding:0}
+
+
+body {background:#fff;margin:30px;font-family:Georgia;font-variant:small-caps}
+
+
+#buttons, #size, #reset {width:250px;float:left;border:5px solid #323;margin: 20px 20px 0 0px;background:gray}
+
+
+
+a {outline:none}
+
+#paint {width:250px;float:left;background:gray;height:170px;border:5px solid #323;margin:20px 20px 0 0}
+
+#paint p { font-size:2em}
+
+#wrap .box {float:left;width:10px;height:10px;}
+
+
+p {margin: 0 0px 10px;}
+
+
+p a, h2 {font-size:1.3em;padding:5px 0;font-weight:bold;color:black;display:block;text-align:center}
+h1 span {font-size:0.5em;margin: 0 20px}
+h2 {font-size:1.7em}
+
+#red {background-color:red}
+#orange {background-color:orange}
+#yellow {background-color:yellow}
+#green {background-color:green}
+#blue {background-color:blue}
+#purple {background-color:purple}
+#white {background-color:white}
+#black {background-color:black;color:white}
+#gray {background-color:gray}
+
+#reset {float:left;cursor:pointer}
+
+#small {font-size:1.8em}
