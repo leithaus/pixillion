@@ -26,7 +26,9 @@ class Boot {
     // Build SiteMap
     val entries =
       ( Menu(Loc("Home", List("index"), "Home"))
-       :: Menu(Loc("Paint.1", List( "Paint" ), "PAINT", If(User.loggedIn_? _, "x")))
+       :: Menu(Loc("Paint.1", List( "Paint" ), "Paint", If(User.loggedIn_? _, "x")))
+       :: Menu(Loc("Chat.1", List("chat"), "Chat", If(User.loggedIn_? _, "x")))
+//       :: Menu(Loc("Pixillion.1", List( "pixillion" ), "View", If(User.loggedIn_? _, "x")))
        :: User.sitemap )
     LiftRules.setSiteMap(SiteMap(entries:_*))
 

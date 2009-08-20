@@ -7,8 +7,70 @@
     <title>Lift Web Framework</title>
     <lift:CSS.blueprint />
     <lift:CSS.fancyType />
+    <!-- link rel="stylesheet" type="text/css" href="../style.css" / -->
     <script id="jquery" src="/classpath/jquery.js" type="text/javascript"/>
     <script id="json" src="/classpath/json.js" type="text/javascript"/>
+    <script type="text/javascript">
+	$(document).ready(function() {
+		
+		var color = "red";
+		var add = 0;
+		var odd = 0;
+		$("a#big").click(function(){
+			add = 1;
+			odd = 25;
+			$("a#big").css({'font-size' : "1.8em" });
+			$("a#small").css({'font-size' : "1.3em" });
+		});
+		$("a#small").click(function(){
+			add = 0;
+			odd = 0;
+			$("a#small").css({'font-size' : "1.8em" });
+			$("a#big").css({'font-size' : "1.3em" });
+		});
+///////////////////////////////////////////
+
+	
+		
+			$("div#wrap div.box").hover(function(){
+
+				$(this).css({'background-color' : color });
+				
+				var target = $(this).attr("id");
+				var targett = Number(target) + add;
+				var targettt = Number(target) - add;
+				var torgett = Number(target) + odd;
+				var torgettt = Number(target) - odd;
+				
+				$("#"+torgett).css({'background-color' : color });
+				$("#"+torgettt).css({'background-color' : color });
+				$("#"+targett).css({'background-color' : color });
+				$("#"+targettt).css({'background-color' : color });
+				
+			}, function () {
+
+			});
+			
+	
+		
+////////////////////////////////////////////
+		$("a#yellow").click(function () {color = "yellow";});
+		$("a#red").click(function () {color = "red";});
+		$("a#blue").click(function () {color = "blue";});
+		$("a#orange").click(function () {color = "orange";});
+		$("a#green").click(function () {color = "green";});
+		$("a#purple").click(function () {color = "purple";});
+		$("a#black").click(function () {color = "black";});
+		$("a#white").click(function () {color = "white";});
+		$("a#gray").click(function () {color = "gray";});
+		
+
+		$("#reset").click(function () {
+			$("div.box").css({'background-color' : 'gray', });
+		});
+
+	});
+    </script>
     <style>
 /* <![CDATA[ */
 .sidebar ul {

@@ -10,7 +10,7 @@ body {background:#fff;margin:30px;font-family:Georgia;font-variant:small-caps}
 
 a {outline:none}
 
-#paint {width:250px;float:left;background:gray;height:170px;border:5px solid #323;margin:20px 20px 0 0}
+#paint {width:250px;float:left;background:gray;height:250px;border:5px solid #323;margin:20px 20px 0 0}
 
 #paint p { font-size:2em}
 
