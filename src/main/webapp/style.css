@@ -1,7 +1,8 @@
 * {margin: 0; padding:0}
 
 
-body {background:#fff;margin:30px;font-family:Georgia;font-variant:small-caps}
+/* body {background:#fff;margin:30px;font-family:Georgia;font-variant:small-caps} */
+body {background:#fff;margin:30px}
 
 
 #buttons, #size, #reset {width:250px;float:left;border:5px solid #323;margin: 20px 20px 0 0px;background:gray}
