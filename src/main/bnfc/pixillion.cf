@@ -1,0 +1,28 @@
+-- -*- mode: Haskell;-*- 
+-- Filename:    pixillion.cf<2> 
+-- Authors:     lgm                                                    
+-- Creation:    Tue Aug 25 20:14:05 2009 
+-- Copyright:   Not supplied 
+-- Description: 
+-- ------------------------------------------------------------------------
+
+entrypoints Expression, PxlExpr, PxlExpr1, PxlExpr2                       ;
+
+Beginning       . Expression    ::= PxlExpr "."                           ;
+
+TwoCell         . PxlExpr       ::= "{2|" [PxlExpr1] "|2}"                ;
+OneCell         . PxlExpr1      ::= "{1|" [PxlExpr2] "|1}"                ;
+ZeroCell        . PxlExpr2      ::= "{0|" Ident  ":" [Facet] "|0}"        ;
+
+Property        . Facet         ::= Ident "=" Ident                       ;
+
+[]              . [PxlExpr1]    ::=                                       ;
+(: [])          . [PxlExpr1]    ::= PxlExpr1                              ;
+(:)             . [PxlExpr1]    ::= PxlExpr1 "," [PxlExpr1]               ;
+
+[]              . [PxlExpr2]    ::=                                       ;
+(: [])          . [PxlExpr2]    ::= PxlExpr2                              ;
+(:)             . [PxlExpr2]    ::= PxlExpr2 "," [PxlExpr2]               ;
+
+[]              . [Facet]       ::=                                       ;
+(:)             . [Facet]       ::= Facet [Facet]                         ;
