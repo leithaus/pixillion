@@ -11,6 +11,7 @@
     <script id="jquery" src="/classpath/jquery.js" type="text/javascript"/>
     <script id="json" src="/classpath/json.js" type="text/javascript"/>
     <script type="text/javascript">
+      /* <![CDATA[ */
 	$(document).ready(function() {
 		
 		var color = "red";
@@ -32,7 +33,7 @@
 
 	
 		
-			$("div#wrap div.box").hover(function(){
+			$("div#wrap div.pxl").hover(function(){
 
 				$(this).css({'background-color' : color });
 				
@@ -66,10 +67,11 @@
 		
 
 		$("#reset").click(function () {
-			$("div.box").css({'background-color' : 'gray', });
+			$("div.pxl").css({'background-color' : 'gray', });
 		});
 
 	});
+    /* ]]> */
     </script>
     <style>
 /* <![CDATA[ */
