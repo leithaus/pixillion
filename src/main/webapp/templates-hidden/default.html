@@ -35,21 +35,10 @@
 		
 			$("div#wrap div.pxl").hover(function(){
 
-				$(this).css({'background-color' : color });
-				
-				var target = $(this).attr("id");
-				var targett = Number(target) + add;
-				var targettt = Number(target) - add;
-				var torgett = Number(target) + odd;
-				var torgettt = Number(target) - odd;
-				
-				$("#"+torgett).css({'background-color' : color });
-				$("#"+torgettt).css({'background-color' : color });
-				$("#"+targett).css({'background-color' : color });
-				$("#"+targettt).css({'background-color' : color });
+				$(this).css({'background-color' : color });  
 				
 			}, function () {
-
+                           $(this).css({'background-color' : "gray" });
 			});
 
                 $("div#wrap div.pxl").click(function () {alert($(this).attr("id"));});
