@@ -11,8 +11,11 @@ entrypoints Expression, PxlExpr, PxlExpr1, PxlExpr2                       ;
 Beginning       . Expression    ::= PxlExpr "."                           ;
 
 TwoCell         . PxlExpr       ::= "{2|" [PxlExpr1] "|2}"                ;
+Annotated2Cell  . PxlExpr       ::= "{2|" Ident ":" [PxlExpr1] ";" [Facet] "|2}" ;
 OneCell         . PxlExpr1      ::= "{1|" [PxlExpr2] "|1}"                ;
-ZeroCell        . PxlExpr2      ::= "{0|" Ident  ":" [Facet] "|0}"        ;
+Annotated1Cell  . PxlExpr1      ::= "{1|" Ident ":" [PxlExpr2] ";" [Facet] "|1}" ;
+ZeroCell        . PxlExpr2      ::= "{0|" Ident ":" "color" "=" Ident "|0}" ;
+Faceted0Cell    . PxlExpr2      ::= "{0|" Ident  ":" "color" "=" Ident "," [Facet] "|0}" ;
 
 Property        . Facet         ::= Ident "=" Ident                       ;
 
@@ -25,4 +28,5 @@ Property        . Facet         ::= Ident "=" Ident                       ;
 (:)             . [PxlExpr2]    ::= PxlExpr2 "," [PxlExpr2]               ;
 
 []              . [Facet]       ::=                                       ;
-(:)             . [Facet]       ::= Facet [Facet]                         ;
+(: [])          . [Facet]       ::= Facet                                 ;
+(:)             . [Facet]       ::= Facet "," [Facet]                     ;
